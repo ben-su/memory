@@ -1,13 +1,12 @@
 .card {
-  width: 20vh;
-  height: 20vh;
-  max-width: 20vw;
-  max-height: 20vw;
-  margin: 1vh;
+  width: 19vh;
+  height: 19vh;
+  max-width: 19vw;
+  max-height: 19vw;
+  margin: .2vh;
   perspective: 1000px;
-  &:hover .inner {
-    transform: rotateY(180deg);
-  }
+  transition: opacity .5s;
+  transform-origin: left;
 }
 
 .img {
@@ -21,6 +20,15 @@
   text-align: center;
   transition: transform 1s;
   transform-style: preserve-3d;
+}
+
+.flipped .inner {
+  transform: rotateY(180deg);
+}
+
+.cleared {
+  opacity: .15;
+  transition-delay: 2s;
 }
 
 .front, .back{

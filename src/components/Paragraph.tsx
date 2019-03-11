@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CustomText } from "./CustomText";
+import { CustomText } from "../CustomText";
 import styles from "./Paragraph.module.scss";
 
 interface Props {

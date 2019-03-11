@@ -1,10 +1,12 @@
 export type TCard = {
-  id: number;
+  id: string;
+  pairId: number;
   src: string;
 };
 
 export type TPlayer = {
   id: number;
   name: string;
-  score?: number;
+  score: number;
+  selected?: boolean;
 };
