@@ -1,28 +1,44 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import { Board } from "./components/Board";
+import styles from "./app.module.scss";
+import { PlayerInfo } from "./components/PlayerInfo";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+const dummyCards = [
+  { id: 1, src: require("./img/1.jpg") },
+  { id: 2, src: require("./img/2.jpg") },
+  { id: 3, src: require("./img/3.jpg") },
+  { id: 4, src: require("./img/4.jpg") },
+  { id: 1, src: require("./img/1.jpg") },
+  { id: 2, src: require("./img/2.jpg") },
+  { id: 3, src: require("./img/3.jpg") },
+  { id: 4, src: require("./img/4.jpg") },
+  { id: 1, src: require("./img/1.jpg") },
+  { id: 2, src: require("./img/2.jpg") },
+  { id: 3, src: require("./img/3.jpg") },
+  { id: 4, src: require("./img/4.jpg") },
+  { id: 1, src: require("./img/1.jpg") },
+  { id: 2, src: require("./img/2.jpg") },
+  { id: 3, src: require("./img/3.jpg") },
+  { id: 4, src: require("./img/4.jpg") },
+  { id: 1, src: require("./img/1.jpg") },
+  { id: 2, src: require("./img/2.jpg") },
+  { id: 3, src: require("./img/3.jpg") },
+  { id: 4, src: require("./img/4.jpg") },
+  { id: 1, src: require("./img/1.jpg") },
+  { id: 2, src: require("./img/2.jpg") },
+  { id: 3, src: require("./img/3.jpg") },
+  { id: 4, src: require("./img/4.jpg") }
+];
+
+function App() {
+  return (
+    <div className={styles.app}>
+      <PlayerInfo player={{ id: 1, name: "Player 1" }} />
+      <Board cards={dummyCards} />
+      <PlayerInfo player={{ id: 2, name: "Player 2" }} />
+    </div>
+  );
 }
 
 export default App;
