@@ -13,6 +13,7 @@ export const Anchor: React.FC<Props> = ({
 }: Props) => {
   return (
     <a
+      data-testid="a"
       href="javascript:"
       className={`${styles.a} ${isBottom ? styles.bottom : ""}`}
       onClick={() => clickHandler()}

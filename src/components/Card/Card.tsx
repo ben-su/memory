@@ -17,6 +17,7 @@ export const Card: React.FC<Props> = ({ card }: Props) => {
 
   return (
     <div
+      data-testid="card"
       className={`${styles.card} ${
         isSelected || isCleared ? styles.flipped : ""
       } ${isCleared ? styles.cleared : ""}`}
@@ -29,14 +30,19 @@ export const Card: React.FC<Props> = ({ card }: Props) => {
         }
       }}
     >
-      <div className={styles.inner}>
-        <div className={styles.front}>
+      <div className={styles.inner} data-testid="inner">
+        <div className={styles.front} data-testid="front">
           <div className={styles.layer} />
           <div className={styles.pattern} />
         </div>
-        <div className={styles.back}>
+        <div className={styles.back} data-testid="back">
           <div className={styles.layer} />
-          <img className={styles.img} alt={card.src} src={card.src} />
+          <img
+            className={styles.img}
+            alt={card.src}
+            src={card.src}
+            data-testid="img"
+          />
         </div>
       </div>
     </div>
