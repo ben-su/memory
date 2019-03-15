@@ -15,3 +15,12 @@
   font-weight: bold;
 }
 
+@media (max-width: 700px) {
+  .playerInfo {
+    display: block;
+    font-size: 12px;
+  }
+  .selected {
+    font-size: 12px;
+  }
+}

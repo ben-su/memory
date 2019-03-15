@@ -1,7 +1,7 @@
-import { TCard } from "../types";
-import React, {useRef} from "react";
+import { TCard } from "../../types";
+import React, { useRef } from "react";
 import styles from "./Card.module.scss";
-import {useActions, useStore} from "../store";
+import { useActions, useStore } from "../../store";
 
 interface Props {
   card: TCard;
@@ -17,23 +17,25 @@ export const Card: React.FC<Props> = ({ card }: Props) => {
 
   return (
     <div
-      className={`${styles.card} ${isSelected || isCleared ? styles.flipped : ""} ${
-        isCleared ? styles.cleared : ""
-      }`}
+      className={`${styles.card} ${
+        isSelected || isCleared ? styles.flipped : ""
+      } ${isCleared ? styles.cleared : ""}`}
       style={{
         transform: `rotate(${rotationValue.current}deg)`
       }}
       onClick={() => {
-        if (!isSelected && !isCleared){
+        if (!isSelected && !isCleared) {
           selectCard(card);
         }
       }}
     >
       <div className={styles.inner}>
         <div className={styles.front}>
+          <div className={styles.layer} />
           <div className={styles.pattern} />
         </div>
         <div className={styles.back}>
+          <div className={styles.layer} />
           <img className={styles.img} alt={card.src} src={card.src} />
         </div>
       </div>

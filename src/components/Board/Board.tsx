@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import styles from "./board.module.scss";
-import { TCard } from "../types";
-import { Card } from "./Card";
-import { useActions, useStore } from "../store";
+import styles from "./Board.module.scss";
+import { TCard } from "../../types";
+import { Card } from "../Card/Card";
+import { useActions, useStore } from "../../store";
 
 interface Props {
   cards: TCard[];
@@ -16,7 +16,7 @@ export const Board: React.FC<Props> = ({ cards }: Props) => {
   const clearedCardsCount = useRef(0);
   useEffect(() => {
     if (selectedCards.length === 2) switchPlayers(null);
-    if (clearedCardsCount.current !== clearedCards.length){
+    if (clearedCardsCount.current !== clearedCards.length) {
       clearedCardsCount.current += 2;
       score(null);
     }
