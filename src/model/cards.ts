@@ -1,4 +1,4 @@
-import { Action } from "easy-peasy";
+import { action, Action } from "easy-peasy";
 import { TCard } from "../types";
 
 export interface CardsModel {
@@ -13,10 +13,10 @@ const cards: CardsModel = {
   items: [],
   selectedItems: [],
   clearedItems: [],
-  add: (state, payload: TCard) => {
+  add: action((state, payload: TCard) => {
     state.items.push(payload);
-  },
-  select: (state, payload: TCard) => {
+  }),
+  select: action((state, payload: TCard) => {
     if (!state.selectedItems.find(c => c.id === payload.id)) {
       if (state.selectedItems.length === 2) {
         state.selectedItems = [];
@@ -32,7 +32,7 @@ const cards: CardsModel = {
         state.selectedItems.push(payload);
       }
     }
-  }
+  })
 };
 
 export default cards;

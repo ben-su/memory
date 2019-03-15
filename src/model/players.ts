@@ -1,4 +1,4 @@
-import { Action } from "easy-peasy";
+import { action, Action } from "easy-peasy";
 import { TPlayer } from "../types";
 
 export interface PlayersModel {
@@ -16,15 +16,15 @@ const defaultItems: TPlayer[] = [
 const players: PlayersModel = {
   items: defaultItems,
   selectedPlayer: defaultItems[0],
-  switch: state => {
+  switch: action(state => {
     const currentlySelectedId = state.selectedPlayer.id;
     const otherPlayer = state.items.find(p => p.id !== currentlySelectedId);
     if (otherPlayer) state.selectedPlayer = otherPlayer;
-  },
-  addScore: state => {
+  }),
+  addScore: action(state => {
     const player = state.items.find(p => p.id === state.selectedPlayer.id);
     if (player) player.score++;
-  }
+  })
 };
 
 export default players;

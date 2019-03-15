@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.scss";
+import "./scss/App.scss";
 import { StoreProvider } from "easy-peasy";
 import store from "./store";
 import BoardContainer from "./components/BoardContainer/BoardContainer";
@@ -9,6 +9,7 @@ const App: React.FC = () => {
   const [theme, setTheme] = useState(Theme.Light);
   const toggleTheme = () =>
     setTheme(theme === Theme.Light ? Theme.Dark : Theme.Light);
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <StoreProvider store={store}>

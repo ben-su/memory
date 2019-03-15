@@ -9,7 +9,7 @@ import { Anchor } from "../Anchor/Anchor";
 import ThemeContext, { Theme } from "../../contexts/ThemeContext";
 
 const BoardContainer: React.FC = () => {
-  // Pull out state from our store
+  // Pull out state from store
   const cards = useStore(state => state.cards.items);
   const players = useStore(state => state.players.items);
   // Gets redux action
