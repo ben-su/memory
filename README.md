@@ -8,6 +8,7 @@
   * Komponenten-Tests mit [React-Testing-Library](https://github.com/kentcdodds/react-testing-library)
   * Styling via CSS Modules (SASS)
   * Theming via [React Context](https://reactjs.org/docs/context.html)
+  * Responsive Layout
   
 ### Struktur
   * Datenmodell in `/src/model`
