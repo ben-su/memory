@@ -15,7 +15,7 @@ const BoardContainer: React.FC = () => {
   // Gets redux action
   const addCard = useActions(actions => actions.cards.add);
 
-  // initialize
+  // initialize cards (pick 12 random cards and add a pair of each)
   useEffect(() => {
     // generate random cards
     const cards: TCard[] = [];
@@ -41,6 +41,7 @@ const BoardContainer: React.FC = () => {
   }, []);
 
   const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <div
       className={`${styles.app} ${

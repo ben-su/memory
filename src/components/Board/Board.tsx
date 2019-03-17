@@ -13,14 +13,19 @@ export const Board: React.FC<Props> = ({ cards }: Props) => {
   const score = useActions(actions => actions.players.addScore);
   const selectedCards = useStore(state => state.cards.selectedItems);
   const clearedCards = useStore(state => state.cards.clearedItems);
+
   const clearedCardsCount = useRef(0);
+
   useEffect(() => {
+    // switch players when 2 cards are selected and not matching
     if (selectedCards.length === 2) switchPlayers(null);
+    // add 1 to score of current player if we have new cleared cards
     if (clearedCardsCount.current !== clearedCards.length) {
       clearedCardsCount.current += 2;
       score(null);
     }
   });
+
   return (
     <div className={styles.board}>
       {cards.map(c => (
