@@ -12,7 +12,7 @@
   
 ### Struktur
   * Datenmodell in `/src/model`
-  * Komponenten `/src/components`
+  * Komponenten in `/src/components`
   * Root-Komponente in `/src/App.tsx`
   
 ### Demo
