@@ -49,14 +49,14 @@ const BoardContainer: React.FC = () => {
       } `}
     >
       <Anchor
-        text={`Theme wechseln (${theme === Theme.Dark ? "Dark" : "Light"})`}
+        text={`Switch theme (${theme === Theme.Dark ? "Dark" : "Light"})`}
         clickHandler={() => (toggleTheme ? toggleTheme() : null)}
       />
       <PlayerInfo player={players[0]} />
       <Board cards={cards} />
       <PlayerInfo player={players[1]} end={true} />
       <Anchor
-        text="Neustart"
+        text="Restart"
         clickHandler={() => window.location.reload()}
         isBottom={true}
       />

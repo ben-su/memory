@@ -5,8 +5,8 @@ export enum Theme {
   Dark,
 }
 
-export interface ThemeContextProps { theme: number; toggleTheme?: () => void }
-const ThemeContext = React.createContext<ThemeContextProps>({
+export interface IThemeContextProps { theme: number; toggleTheme?: () => void; }
+const ThemeContext = React.createContext<IThemeContextProps>({
   theme: Theme.Light,
 });
 

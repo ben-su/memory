@@ -17,7 +17,7 @@ export const PlayerInfo: React.FC<Props> = ({ player, end }: Props) => {
         isSelected ? styles.selected : ""
       }`}
     >
-      {player.name} | Punkte: {player.score || 0}{" "}
+      {player.name} | Score: {player.score || 0}{" "}
       {isSelected ? "| It's your turn!" : ""}
     </div>
   );
