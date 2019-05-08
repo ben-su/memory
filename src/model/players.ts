@@ -9,8 +9,8 @@ export interface PlayersModel {
 }
 
 const defaultItems: TPlayer[] = [
-  { id: 1, name: "Spieler 1", score: 0 },
-  { id: 2, name: "Spieler 2", score: 0 },
+  { id: 1, name: "Player 1", score: 0 },
+  { id: 2, name: "Player 2", score: 0 },
 ];
 
 const players: PlayersModel = {
