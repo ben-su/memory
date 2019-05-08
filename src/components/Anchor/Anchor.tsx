@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "./Anchor.module.scss";
 
-type Props = {
+interface Props {
   text: string;
   clickHandler: () => void;
   isBottom?: boolean;
-};
+}
 export const Anchor: React.FC<Props> = ({
   text,
   clickHandler,
-  isBottom
+  isBottom,
 }: Props) => {
   return (
     <a

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import "./scss/App.scss";
 import { StoreProvider } from "easy-peasy";
-import store from "./store";
+import React, { useState } from "react";
 import BoardContainer from "./components/BoardContainer/BoardContainer";
 import ThemeContext, { Theme } from "./contexts/ThemeContext";
+import "./scss/App.scss";
+import store from "./store";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState(Theme.Light);

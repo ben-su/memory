@@ -13,11 +13,11 @@ const cards: CardsModel = {
   items: [],
   selectedItems: [],
   clearedItems: [],
-  add: action((state, payload: TCard) => {
+  add: action((state, payload) => {
     state.items.push(payload);
   }),
-  select: action((state, payload: TCard) => {
-    if (!state.selectedItems.find(c => c.id === payload.id)) {
+  select: action((state, payload) => {
+    if (!state.selectedItems.find((c) => c.id === payload.id)) {
       if (state.selectedItems.length === 2) {
         state.selectedItems = [];
         state.selectedItems.push(payload);
@@ -32,7 +32,7 @@ const cards: CardsModel = {
         state.selectedItems.push(payload);
       }
     }
-  })
+  }),
 };
 
 export default cards;

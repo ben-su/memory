@@ -1,17 +1,17 @@
+import { StoreProvider } from "easy-peasy";
+import "jest-dom/extend-expect";
 import React from "react";
 import { cleanup, fireEvent, render } from "react-testing-library";
-import "jest-dom/extend-expect";
-import { Card } from "./Card";
-import { TCard } from "../../types";
 import store from "../../store";
-import { StoreProvider } from "easy-peasy";
+import { TCard } from "../../types";
+import { Card } from "./Card";
 
 afterEach(cleanup);
 beforeAll(() => {
   const c: TCard = {
     id: "1",
     src: require(`./../../img/1.jpg`),
-    pairId: 1
+    pairId: 1,
   };
 
   store.dispatch.cards.add(c);
@@ -21,7 +21,7 @@ test("display card and flip", () => {
   const { getByTestId } = render(
     <StoreProvider store={store}>
       <Card card={store.getState().cards.items[0]} />
-    </StoreProvider>
+    </StoreProvider>,
   );
 
   // @ts-ignore

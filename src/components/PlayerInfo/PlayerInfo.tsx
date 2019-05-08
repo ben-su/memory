@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./PlayerInfo.module.scss";
-import { TPlayer } from "../../types";
 import { useStore } from "../../store";
+import { TPlayer } from "../../types";
+import styles from "./PlayerInfo.module.scss";
 
 interface Props {
   player: TPlayer;
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const PlayerInfo: React.FC<Props> = ({ player, end }: Props) => {
-  const selectedPlayer = useStore(state => state.players.selectedPlayer);
+  const selectedPlayer = useStore((state) => state.players.selectedPlayer);
   const isSelected = selectedPlayer.id === player.id;
   return (
     <div

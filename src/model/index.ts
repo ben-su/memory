@@ -8,7 +8,7 @@ export interface StoreModel {
 
 const model: StoreModel = {
   cards,
-  players
+  players,
 };
 
 export default model;
