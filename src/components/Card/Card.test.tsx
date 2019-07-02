@@ -1,7 +1,7 @@
 import { StoreProvider } from "easy-peasy";
 import "jest-dom/extend-expect";
 import React from "react";
-import { cleanup, fireEvent, render } from "react-testing-library";
+import { cleanup, fireEvent, render } from "@testing-library/react";
 import store from "../../store";
 import { TCard } from "../../types";
 import { Card } from "./Card";

@@ -32,11 +32,9 @@ export const Card: React.FC<Props> = ({ card }: Props) => {
     >
       <div className={styles.inner} data-testid="inner">
         <div className={styles.front} data-testid="front">
-          <div className={styles.layer} />
           <div className={styles.pattern} />
         </div>
         <div className={styles.back} data-testid="back">
-          <div className={styles.layer} />
           <img
             className={styles.img}
             alt={card.src}

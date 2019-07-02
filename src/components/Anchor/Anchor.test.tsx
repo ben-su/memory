@@ -1,6 +1,6 @@
 import "jest-dom/extend-expect";
 import React from "react";
-import { cleanup, render } from "react-testing-library";
+import { cleanup, render } from "@testing-library/react";
 import { Anchor } from "./Anchor";
 
 afterEach(cleanup);
